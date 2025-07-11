@@ -870,30 +870,29 @@ img {
 /*==================== PROJECT IN MIND ====================*/
 .project{
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
 }
 .project__bg{
   background-color: var(--first-color-second);
   padding-bottom: -6rem;
    padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .project__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-75);
-  text-align: center;
 }
-.project__description {
+.project__desription {
   margin-bottom: var(--mb-1-5);
-  text-align: center;
+}
+.project__title,
+.project__description {
+  color: #fff;
+}
+.project__img {
+  width: 478px;
+  border-radius: .5rem;
+  align-self: flex-end;
+  margin-bottom: 0;
+  display: block;
 }
 .project__data {
   margin-bottom: 0;
@@ -1907,51 +1906,19 @@ footer__copy {
     .container {
         max-width: 1320px;
     }
-
+    
     .home__social {
         transform: translateX(-6rem);
     }
-
+    
     .services__container {
         grid-template-columns: repeat(3, 268px);
     }
-
-    .portfolio__container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        align-items: stretch;
-    }
+    
     .portfolio__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 1.5rem;
-        background: var(--container-color);
-        border-radius: 1rem;
-        box-shadow: 0 4px 24px rgba(0,0,0,.08);
-        min-height: 100%;
+        column-gap: 6rem;
     }
-    .portfolio__img {
-        width: 340px;
-        max-width: 100%;
-        height: auto;
-        border-radius: 1rem;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 2px 16px rgba(0,0,0,.07);
-    }
-    .portfolio__title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-    .portfolio__description {
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    .portfolio__button {
-        margin-top: auto;
-    }
+    
     .project__container {
         padding: 4rem 0 3rem;
     }
