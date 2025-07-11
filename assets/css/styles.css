@@ -458,9 +458,12 @@ img {
     position: relative;
   }
   .home__social {
-    left: 0.5rem;
-    top: 40%;
-    transform: translateY(-40%);
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    left: auto;
+    top: auto;
+    transform: none;
     gap: 1rem;
   }
   .home__content {
