@@ -198,23 +198,7 @@ img {
     padding: 2rem 0 1.5rem;
   }
 
-  /* Home social icons for iPhone 14 */
-  .home__social {
-    position: fixed;
-    left: 0.5rem;
-    top: 30%;
-    transform: translateY(0);
-    gap: 1.5rem;
-    z-index: 10;
-    background: none;
-  }
-  .home__social-icon {
-    font-size: 1.7rem;
-    padding: 0.3rem 0.1rem;
-  }
-  .home__container {
-    padding-left: 2.5rem;
-  }
+  /* Remove iPhone 14 specific home__social styles to restore default arrangement */
 }
 }
     position: relative;
