@@ -156,6 +156,48 @@ img {
   .home.section {
     padding-top: 0;
     min-height: 100vh;
+
+/* iPhone 14 portrait (390px x 844px) specific adjustments */
+@media screen and (max-width: 420px) {
+  .contact__form-box {
+    max-width: 100%;
+    padding: 1.25rem 0.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    border-radius: 6px;
+  }
+  .contact__form {
+    gap: 1rem;
+    padding: 0;
+  }
+  .contact__form h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  .contact__inputbox label {
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+  }
+  .contact__inputbox input,
+  .contact__inputbox textarea {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 3px;
+  }
+  .contact__form button,
+  .contact__form input[type="submit"] {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px;
+    margin-top: 0.25rem;
+  }
+  .contact__container {
+    row-gap: 2rem;
+    padding: 0.5rem 0;
+  }
+  .section {
+    padding: 2rem 0 1.5rem;
+  }
+}
     position: relative;
     display: flex;
     align-items: center;
