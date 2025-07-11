@@ -870,29 +870,30 @@ img {
 /*==================== PROJECT IN MIND ====================*/
 .project{
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 .project__bg{
   background-color: var(--first-color-second);
   padding-bottom: -6rem;
    padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .project__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-75);
+  text-align: center;
 }
-.project__desription {
-  margin-bottom: var(--mb-1-5);
-}
-.project__title,
 .project__description {
-  color: #fff;
-}
-.project__img {
-  width: 478px;
-  border-radius: .5rem;
-  align-self: flex-end;
-  margin-bottom: 0;
-  display: block;
+  margin-bottom: var(--mb-1-5);
+  text-align: center;
 }
 .project__data {
   margin-bottom: 0;
