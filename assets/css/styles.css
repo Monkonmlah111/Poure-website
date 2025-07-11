@@ -197,9 +197,6 @@ img {
   .section {
     padding: 2rem 0 1.5rem;
   }
-
-  /* Remove iPhone 14 specific home__social styles to restore default arrangement */
-}
 }
     position: relative;
     display: flex;
@@ -368,7 +365,6 @@ img {
 /*==================== HOME ====================*/
 .home__container {
   gap: 1rem;
-  position: relative;
 }
 .home__content{
   grid-template-columns: 5fr 3fr;
@@ -380,15 +376,9 @@ img {
   justify-content: center;
 }
 .home__social{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  gap: 1.2rem;
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
 }
 .home__social-icon {
   color: var(--first-color);
@@ -454,22 +444,11 @@ img {
 
 /* Home section responsive adjustments */
 @media screen and (max-width: 767px) {
-  .home__container {
-    position: relative;
-  }
-  .home__social {
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    left: auto;
-    top: auto;
-    transform: none;
-    gap: 1rem;
-  }
   .home__content {
     padding-top: 1rem;
     min-height: auto;
   }
+  
   .home__scroll {
     position: static;
     transform: none;
