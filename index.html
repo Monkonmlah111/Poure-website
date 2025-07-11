@@ -139,7 +139,7 @@
                 <span class="section__subtitle">My Introduction</span>
 
                 <div class="about__container container grid">
-                        <img src ="assets/img/about.jpg" alt="" class="about__img">
+                        <img src ="assets/img/about.jpg" alt="Monkonmlah Darlington Poure" class="about__img">
 
                         <div class="about__data">
                             <p class="about__description"> I am Monkonmlah Darlington Poure,
@@ -416,7 +416,7 @@
                     </div>
                     <div>
                         <h3 class="qualification__title">High School Diploma</h3>
-                        <span class="qualification__subtitle">Collage of West Africa, Liberia</span>
+                        <span class="qualification__subtitle">College of West Africa, Liberia</span>
                         <div class="qualification__calendar">
                             <i class="uil uil-calendar-alt"></i> 2019 - 2022
                         </div>
@@ -579,7 +579,7 @@
                     <div class="swiper-wrapper">
                         <!--==================== PORTFOLIO 1 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+                            <img src="assets/img/portfolio1.jpg" alt="Network Solutions Portfolio" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Network Solutions</h3>
@@ -593,12 +593,11 @@
                         </div>
                         <!--==================== PORTFOLIO 2 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+                            <img src="assets/img/portfolio2.jpg" alt="Clarity Through Design Portfolio" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Clarity Through design</h3>
-                                <p class="portfolio__description">I aim to bring ideas to life through clean,
-                                    impartfful visuals that resonate with the audience.</p>
+                                <h3 class="portfolio__title">Clarity Through Design</h3>
+                                <p class="portfolio__description">I aim to bring ideas to life through clean, impactful visuals that resonate with the audience.</p>
                                 <a href="#" class="button button__flex button--small portfolio__button">
                                     Domo
                                     <i class="uil uil-arrow-right button__icon"></i>
@@ -607,12 +606,11 @@
                         </div>
                         <!--==================== PORTFOLIO 3 ====================-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+                            <img src="assets/img/portfolio3.jpg" alt="Innovating with IT Portfolio" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Innovating with IT</h3>
-                                <p class="portfolio__description">Represents the drive to build smarter, more resilent 
-                                    Technology system.</p>
+                                <p class="portfolio__description">Represents the drive to build smarter, more resilient technology systems.</p>
                                 <a href="#" class="button button__flex button--small portfolio__button">
                                     Domo
                                     <i class="uil uil-arrow-right button__icon"></i>
@@ -809,7 +807,7 @@
                 </div>
 
                 <div class="blog__load-more">
-                    <a href="#" class="button button--flex">
+                    <a href="#" class="button button--flex" id="load-more-posts">
                         Load More Posts <i class="uil uil-arrow-down button__icon"></i>
                     </a>
                 </div>
@@ -910,10 +908,7 @@
                 <i class="uil uil-star testimonial__icon-star"></i>
             </div>
             <p class="testimonial__description">
-                "I recentl work on a project with Monkonmlah, and I was
-                thoroughly impressed with their expertise in Solving Problem. He was able to quickly 
-                identify and resolve issues that arose during the project, ensuring that we stayed on track and met our deadlines. His attention to detail and 
-                ability to think critically were invaluable assets to our team."
+                "I recently worked on a project with Monkonmlah, and I was thoroughly impressed with his expertise in solving problems. He was able to quickly identify and resolve issues that arose during the project, ensuring that we stayed on track and met our deadlines. His attention to detail and ability to think critically were invaluable assets to our team."
             </p>
         </div>
         </div>
@@ -956,24 +951,28 @@
 
     <div class="contact__form-box">
       <div class="contact__borderline"></div>
-      <form action="" class="contact__form">
+      <form action="https://formspree.io/f/xjkrnorb" method="POST" class="contact__form">
         <h2>Contact Me</h2>
-        <div class="contact__inputbox">
-          <input type="text" id="name" required>
+  <div class="contact__inputbox">
+    <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
           <span>Name</span>
           <i></i>
         </div>
-        <div class="contact__inputbox">
-          <input type="email" id="email" required>
+  <div class="contact__inputbox">
+    <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
           <span>Email</span>
           <i></i>
         </div>
-        <div class="contact__inputbox">
-          <textarea id="message" rows="5" required></textarea>
+  <div class="contact__inputbox">
+    <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
           <span>Message</span>
           <i></i>
         </div>
         <input type="submit" value="Send Message">
+        <div id="form-status"></div>
       </form>
     </div>
   </div>
@@ -1021,7 +1020,7 @@
                    </div>
                 </div>    
 
-                <p class="footer__copy">&#169 Bedimcode All rigth reserved </p>
+                <p class="footer__copy">&#169 Monkonmlah Darlington Poure. All rights reserved.</p>
             </div>
         </footer>
         
@@ -1035,5 +1034,54 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+        <script>
+  // Contact form feedback
+  if (document.querySelector('.contact__form')) {
+    document.querySelector('.contact__form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById('form-status');
+      status.textContent = 'Sending...';
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action || '#', {
+          method: form.method || 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          status.textContent = 'Thank you! Your message has been sent.';
+          form.reset();
+        } else {
+          status.textContent = 'Oops! There was a problem. Please try again.';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+      }
+    });
+  }
+  // Blog load more button
+  if (document.getElementById('load-more-posts')) {
+    document.getElementById('load-more-posts').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('More posts coming soon!');
+    });
+  }
+</script>
+<style>
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+a.button:hover, .portfolio__card:hover, .blog__card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-2px) scale(1.02);
+  transition: all 0.2s;
+}
+</style>
     </body>
 </html>
