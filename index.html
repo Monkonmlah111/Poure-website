@@ -70,6 +70,11 @@
                             </a>
                         </li>
                         <li class="nav__item">
+                            <a href="#certifications" class="nav__link">
+                                <i class="uil uil-award nav__icon"></i> Certifications
+                            </a>
+                        </li>
+                        <li class="nav__item">
                             <a href="#services" class="nav__link">
                                 <i class="uil uil-briefcase nav__icon"></i> Services
                             </a>
@@ -482,6 +487,94 @@
         </div>
     </div>
 </section>
+
+            <!--==================== CERTIFICATIONS ====================-->
+            <section class="certifications section" id="certifications">
+                <h2 class="section__title">Certifications</h2>
+                <span class="section__subtitle">Professional Achievements</span>
+
+                <div class="certifications__container container grid">
+                    <!--==================== CERTIFICATION 1 ====================-->
+                    <div class="certification__content">
+                        <div class="certification__badge">
+                            <i class="uil uil-shield-check certification__icon"></i>
+                        </div>
+                        <div class="certification__data">
+                            <h3 class="certification__title">Network Administrator</h3>
+                            <span class="certification__subtitle">Cisco Networking Academy</span>
+                            <span class="certification__date">2024</span>
+                            <p class="certification__description">
+                                Comprehensive certification covering network configuration, security protocols, and infrastructure management.
+                            </p>
+                            <div class="certification__skills">
+                                <span class="certification__skill">Network Security</span>
+                                <span class="certification__skill">Router Configuration</span>
+                                <span class="certification__skill">Network Troubleshooting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== CERTIFICATION 2 ====================-->
+                    <div class="certification__content">
+                        <div class="certification__badge">
+                            <i class="uil uil-palette certification__icon"></i>
+                        </div>
+                        <div class="certification__data">
+                            <h3 class="certification__title">Adobe Certified Professional</h3>
+                            <span class="certification__subtitle">Adobe Systems</span>
+                            <span class="certification__date">2020</span>
+                            <p class="certification__description">
+                                Professional certification in digital design, demonstrating expertise in Adobe Creative Suite applications.
+                            </p>
+                            <div class="certification__skills">
+                                <span class="certification__skill">Photoshop</span>
+                                <span class="certification__skill">Illustrator</span>
+                                <span class="certification__skill">InDesign</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== CERTIFICATION 3 ====================-->
+                    <div class="certification__content">
+                        <div class="certification__badge">
+                            <i class="uil uil-lock certification__icon"></i>
+                        </div>
+                        <div class="certification__data">
+                            <h3 class="certification__title">Cybersecurity Fundamentals</h3>
+                            <span class="certification__subtitle">CompTIA Security+</span>
+                            <span class="certification__date">In Progress</span>
+                            <p class="certification__description">
+                                Currently pursuing comprehensive cybersecurity certification covering threat analysis and risk management.
+                            </p>
+                            <div class="certification__skills">
+                                <span class="certification__skill">Threat Analysis</span>
+                                <span class="certification__skill">Risk Management</span>
+                                <span class="certification__skill">Security Protocols</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== CERTIFICATION 4 ====================-->
+                    <div class="certification__content">
+                        <div class="certification__badge">
+                            <i class="uil uil-graduation-cap certification__icon"></i>
+                        </div>
+                        <div class="certification__data">
+                            <h3 class="certification__title">Information Technology</h3>
+                            <span class="certification__subtitle">Graphic Era University</span>
+                            <span class="certification__date">2024 - Present</span>
+                            <p class="certification__description">
+                                Bachelor's degree program focusing on modern IT practices, software development, and system administration.
+                            </p>
+                            <div class="certification__skills">
+                                <span class="certification__skill">Programming</span>
+                                <span class="certification__skill">Database Management</span>
+                                <span class="certification__skill">System Administration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!--==================== SERVICES ====================-->
             <section class="services section" id="services">
@@ -1151,6 +1244,146 @@ a.button:hover, .portfolio__card:hover, .blog__card:hover {
   
   .nav__logo-text {
     font-size: 1.1rem;
+  }
+}
+
+/* Certifications styling */
+.certifications__container {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certification__content {
+  background: var(--container-color, #fff);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.certification__content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.certification__badge {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.certification__badge::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  opacity: 0.3;
+  transform: scale(1.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.2); opacity: 0.3; }
+  50% { transform: scale(1.4); opacity: 0.1; }
+  100% { transform: scale(1.2); opacity: 0.3; }
+}
+
+.certification__icon {
+  font-size: 2rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.certification__title {
+  font-size: var(--h3-font-size, 1.25rem);
+  font-weight: var(--font-medium, 500);
+  margin-bottom: 0.5rem;
+  color: var(--title-color, #000);
+}
+
+.certification__subtitle {
+  font-size: var(--small-font-size, 0.875rem);
+  color: var(--text-color-light, #666);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.certification__date {
+  font-size: var(--smaller-font-size, 0.75rem);
+  color: var(--first-color, #667eea);
+  font-weight: var(--font-medium, 500);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.certification__description {
+  font-size: var(--small-font-size, 0.875rem);
+  color: var(--text-color, #333);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.certification__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.certification__skill {
+  background: var(--first-color-alt, #5a67d8);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: var(--smaller-font-size, 0.75rem);
+  font-weight: var(--font-medium, 500);
+}
+
+/* Dark theme support for certifications */
+.dark-theme .certification__content {
+  background: var(--container-color-alt, #2a2a2a);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dark-theme .certification__title {
+  color: var(--title-color-dark, #fff);
+}
+
+.dark-theme .certification__description {
+  color: var(--text-color-dark, #ccc);
+}
+
+/* Responsive design for certifications */
+@media screen and (max-width: 767px) {
+  .certifications__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .certification__content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .certification__badge {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .certification__icon {
+    font-size: 1.5rem;
   }
 }
 </style>
