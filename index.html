@@ -46,7 +46,10 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                 <a href="#" class="nav__logo">MONKONMLAH</a>
+                 <a href="#" class="nav__logo">
+                    <img src="assets/img/MP logo.jpg" alt="MP Logo" class="nav__logo-img">
+                    <span class="nav__logo-text">MONKONMLAH</span>
+                 </a>
 
                  <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -1103,6 +1106,51 @@ a.button:hover, .portfolio__card:hover, .blog__card:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   transform: translateY(-2px) scale(1.02);
   transition: all 0.2s;
+}
+
+/* Logo styling */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav__logo-text {
+  font-weight: var(--font-medium, 500);
+  font-size: var(--h3-font-size, 1.25rem);
+  color: var(--title-color, #000);
+}
+
+/* Dark theme support */
+.dark-theme .nav__logo-img {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.dark-theme .nav__logo-text {
+  color: var(--title-color-dark, #fff);
+}
+
+/* Responsive design */
+@media screen and (max-width: 767px) {
+  .nav__logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .nav__logo-text {
+    font-size: 1.1rem;
+  }
 }
 </style>
     </body>
